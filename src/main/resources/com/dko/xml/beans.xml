@@ -3,8 +3,32 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="mundo" class="com.dko.beans.Mundo">
-			<property name="saludo" value="Hola mundo!!!"></property>
+	<bean id = "persona" class="com.dko.beans.Persona">
+	<!-- ####################################################################################### -->
+		<!-- para darle un diferente orden al los argumetos podemos usar lo siguiente
+		haay notar que estos estan ordenados alreves de como estan declarados en la clase -->
+		
+		
+		<constructor-arg index="2" value="dko"></constructor-arg>
+		<constructor-arg index="1" value="francisco"></constructor-arg>
+		<constructor-arg index="0" value="1"></constructor-arg>
+	<!-- ####################################################################################### -->
+			<!-- para solucionar lo de abajo declaramos el tipo de dato al cual hacemos referencias -->
+				<!-- <constructor-arg value="1" type="int"></constructor-arg> -->
+	
+	
+	<!-- ####################################################################################### -->
+		<!-- Aqui spring trata de hacer un match por que no se le define
+		el tipo de dato con el que debe de trabajar puede ser tanto un 
+		string 1 o un valor 1 entero entonce en este caso se va al valor 
+		del apodo -->
+		<!-- <constructor-arg value="1"></constructor-arg> -->
+	
+	<!-- ####################################################################################### -->
+		<!-- <constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="francisco"></constructor-arg>
+		<constructor-arg value="dko"></constructor-arg> -->
+		
 	</bean>
 
 </beans>
